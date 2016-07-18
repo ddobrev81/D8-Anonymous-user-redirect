@@ -1,0 +1,5 @@
+services:
+  slakb_general_event_subscriber:
+    class: Drupal\slakb_general\EventSubscriber\MymoduleSubscriber
+    tags:
+      - {name: event_subscriber}

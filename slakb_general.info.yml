@@ -1,0 +1,5 @@
+name: 'SLAKB_General'
+type: module
+description: 'A module for custom code and functionalities'
+package: 'Custom'
+core: 8.x
