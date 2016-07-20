@@ -1,0 +1,6 @@
+slakb_general.configure:
+  path: '/admin/config/user-interface/forceanon'
+  defaults:
+    _form: '\Drupal\slakb_general\Form\ForceAnonConfigurationForm'
+  requirements:
+    _permission: 'administer slakb_general'

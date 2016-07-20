@@ -3,3 +3,4 @@ type: module
 description: 'A module for custom code and functionalities'
 package: 'Custom'
 core: 8.x
+configure: slakb_general.configure

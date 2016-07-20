@@ -1,0 +1,5 @@
+slakb_general.configure_ui:
+  route_name: slakb_general.configure
+  title: 'Configuration'
+  base_route: slakb_general.configure
+  tab_root_id: slakb_general.configure

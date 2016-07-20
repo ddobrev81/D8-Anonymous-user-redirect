@@ -1,0 +1,5 @@
+slakb_general.configure:
+  title: ForceAnon
+  description: 'Manage your ForceAnon module'
+  parent: system.admin_config_ui
+  route_name: slakb_general.configure

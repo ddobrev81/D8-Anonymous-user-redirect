@@ -8,18 +8,20 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class SlakbGeneralSubscriber implements EventSubscriberInterface {
-
-  public function checkForRedirection(GetResponseEvent $event) {
+  /**
+   * Your Custom event here.
+   */
+  public function redirectAnon(GetResponseEvent $event) {
     if (UserInterface::hasRole(AccountInterface::ANONYMOUS_ROLE)) {
-      $event->setResponse(new RedirectResponse('/user'));
+      $event->setResponse(new RedirectResponse(\Drupal::config('slakb_general.settings')->get('redirect_path')));
     }
   }
 
   /**
-   * {@inheritdoc}
+   * Add your event to the list of events
    */
   public static function getSubscribedEvents() {
-    $events[KernelEvents::REQUEST][] = array('checkForRedirection');
+    $events[KernelEvents::REQUEST][] = array('redirectAnon');
     return $events;
   }
 

@@ -1,0 +1,10 @@
+# Schema for the configuration files of the Printable module.
+
+slakb_general.settings:
+  type: mapping
+  label: 'slakb_general settings'
+  mapping:
+    redirect_path:
+      type: string
+      label: 'Redirect path'
+ 
