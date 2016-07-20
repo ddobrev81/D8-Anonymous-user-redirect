@@ -2,19 +2,18 @@
 
 /**
  * @file
- * Contains \Drupal\printable\Form\PrintableConfigurationForm.
+ * Contains \Drupal\slakb_general\Form\forceanonConfigurationForm.
  */
 
 namespace Drupal\slakb_general\Form;
 
-//use Drupal\slakb_general\PrintableEntityManagerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides shared configuration form for all printable formats.
+ * Configuration form for ForceAnon module.
  */
 class ForceAnonConfigurationForm extends ConfigFormBase {
 
@@ -41,7 +40,7 @@ class ForceAnonConfigurationForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Redirect to'),
       '#description' => $this->t('Specify a redirect path. Default is "/user".'),
-      '#default_value' => $this->config('printable.settings')->get('redirect_path'),
+      '#default_value' => $this->config('slakb_general.settings')->get('redirect_path'),
     );
 
     return parent::buildForm($form, $form_state);

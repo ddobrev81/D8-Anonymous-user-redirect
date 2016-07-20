@@ -1,4 +1,4 @@
-# Schema for the configuration files of the Printable module.
+# Schema for the configuration files of the ForceAnon module.
 
 slakb_general.settings:
   type: mapping
